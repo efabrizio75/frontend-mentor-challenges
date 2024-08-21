@@ -28,7 +28,7 @@ In the source code you will find what I consider the bare minimum markup and sty
 ### Links
 
 Sandboxes with the solution are available at the following links:
-- View it on Repl.it: [Live Solution]()
+- View it on GitHub Pages: [Live Solution](https://efabrizio75.github.io/frontend-mentor-challenges/newbie/product-preview-card-component/index.html)
 
 ## My process
 
