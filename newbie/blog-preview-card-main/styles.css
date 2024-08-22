@@ -6,7 +6,7 @@
   --col_gray_950: hsl(0, 0%, 7%);
   --panel-top-gutter: 2.4rem;
   --panel-hdr-weight: 500;
-  --img_rounded: 24px;
+  --img_rounded: 20px;
   --body-font-size: 16px;
   --body-hdr-weight: 800;
 }
@@ -68,15 +68,16 @@ main {
 
 footer {
   margin: 5rem 0 3rem 0;
+  text-align: center;
 }
 
 #blog-entry-preview {
   margin: 0 auto;
   min-width: 200px;
-  max-width: 330px;
+  max-width: 386px;
   border-radius: var(--img_rounded);
   background-color: var(--col_white);
-  border: 2px solid var(--col_gray_950);
+  border: 1px solid var(--col_gray_950);
   box-shadow: 0.5rem 0.5rem var(--col_gray_950);
 }
 
@@ -96,7 +97,7 @@ footer {
   list-style-type: none;
   background-color: var(--col_yellow);
   padding: 0.5rem;
-  border-radius: calc(var(--img_rounded) / 6);
+  border-radius: calc(var(--img_rounded) / 5);
   display: inline-block;
   font-weight: 800;
 }
@@ -107,17 +108,24 @@ footer {
   margin: 0.75rem 0;
 }
 
+.container h1:hover {
+  color: var(--col_yellow);
+  cursor: pointer;
+}
+
 .container .blurb {
   line-height: 1.5rem;
+  color: var(--col_gray_500);
 }
 
 .container .authors {
-  margin-top: 1.75rem;
+  margin-top: 1.5rem;
 }
 
 .container .author-bio {
   font-weight: 800;
   vertical-align: middle;
+  color: var(--col_gray_950);
 }
 
 .container .author-bio .avatar {
