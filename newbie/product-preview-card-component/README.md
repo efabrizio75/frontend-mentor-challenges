@@ -29,6 +29,7 @@ In the source code you will find what I consider the bare minimum markup and sty
 
 Sandboxes with the solution are available at the following links:
 - View it on GitHub Pages: [Live Solution](https://efabrizio75.github.io/frontend-mentor-challenges/newbie/product-preview-card-component/index.html)
+- View it on Codepen: [Live Solution](https://codepen.io/Emanuele-Fabrizio/pen/QWXmzqy)
 
 ## My process
 

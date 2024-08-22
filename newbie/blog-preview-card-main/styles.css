@@ -1,0 +1,127 @@
+:root {
+  --col_black: #000;
+  --col_white: #fff;
+  --col_yellow: hsl(47, 88%, 63%);
+  --col_gray_500: hsl(0, 0%, 42%);
+  --col_gray_950: hsl(0, 0%, 7%);
+  --panel-top-gutter: 2.4rem;
+  --panel-hdr-weight: 500;
+  --img_rounded: 24px;
+  --body-font-size: 16px;
+  --body-hdr-weight: 800;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 512px;
+  height: 100%;
+  width: 100%;
+  font-size: var(--body-font-size);
+  line-height: 1.5;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--col_yellow);
+  color: var(--col_gray_950);
+  font-family: "Figtree", system-ui, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+svg,
+video,
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.small {
+  font-size: calc(0.875rem + 0.25vw);
+}
+.extra-small {
+  font-size: calc(0.75rem + 0.25vw);
+}
+
+main {
+  align-items: center;
+  display: flex;
+  min-height: 100vh; /* necessary for vertically centering the content */
+  margin: 0 auto;
+}
+
+footer {
+  margin: 5rem 0 3rem 0;
+}
+
+#blog-entry-preview {
+  margin: 0 auto;
+  min-width: 200px;
+  max-width: 330px;
+  border-radius: var(--img_rounded);
+  background-color: var(--col_white);
+  border: 2px solid var(--col_gray_950);
+  box-shadow: 0.5rem 0.5rem var(--col_gray_950);
+}
+
+#blog-entry-preview .container {
+  margin: 1.5rem;
+}
+
+.container .visual {
+  border-radius: calc(var(--img_rounded) / 2);
+}
+
+.container ul {
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.container ul li {
+  list-style-type: none;
+  background-color: var(--col_yellow);
+  padding: 0.5rem;
+  border-radius: calc(var(--img_rounded) / 6);
+  display: inline-block;
+  font-weight: 800;
+}
+
+.container h1 {
+  font-weight: var(--body-hdr-weight);
+  font-size: calc(1.25rem + 0.25vw);
+  margin: 0.75rem 0;
+}
+
+.container .blurb {
+  line-height: 1.5rem;
+}
+
+.container .authors {
+  margin-top: 1.75rem;
+}
+
+.container .author-bio {
+  font-weight: 800;
+  vertical-align: middle;
+}
+
+.container .author-bio .avatar {
+  display: inline;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
