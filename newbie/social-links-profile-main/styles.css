@@ -12,21 +12,25 @@
   font-weight: 400;
   font-style: normal;
 }
+
 .inter-600 {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
 }
+
 .inter-700 {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
+
 .large {
   font-size: 1.25rem;
 }
+
 .normal {
   font-size: 0.875rem;
 }
@@ -92,11 +96,21 @@ footer a {
   padding: 0.75rem 1rem;
 }
 
+#social-links ul li a {
+  color: var(--col_white);
+  display: block;
+  text-decoration: none;
+}
+
+#social-links ul li:hover a {
+  color: var(--col_grey-700);
+}
+
 #social-links ul li:last-child {
   margin-bottom: 0;
 }
 
 #social-links ul li:hover {
   background-color: var(--col_green);
-  color: var(--col_grey-700);
+  cursor: pointer;
 }
