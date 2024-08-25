@@ -1,77 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe page @ Frontend Mentor | by Emanuele Fabrizio</title>
+  <meta name="description"
+    content="This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Recipe page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="canonical" href="https://efabrizio75.github.io/frontend-mentor-challenges/newbie/recipe-page-main/">
 </head>
-<body>
 
-  Simple Omelette Recipe
-
-  An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
-  to perfection, optionally filled with your choice of cheese, vegetables, or meats.
-
-  Preparation time
-
-  Total: Approximately 10 minutes
-  Preparation: 5 minutes
-  Cooking: 5 minutes
-
-  Ingredients
-
-  2-3 large eggs
-  Salt, to taste
-  Pepper, to taste
-  1 tablespoon of butter or oil
-  Optional fillings: cheese, diced vegetables, cooked meats, herbs
-
-  Instructions
-
-  Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
-  You can add a tablespoon of water or milk for a fluffier texture.
-
-  Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.
-
-  Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
-  the eggs evenly coat the surface.
-
-  Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
-  middle, sprinkle your chosen fillings over one half of the omelette.
-
-  Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
-  fillings. Let it cook for another minute, then slide it onto a plate.
-
-  Enjoy: Serve hot, with additional salt and pepper if needed.
-
-  Nutrition
-
-  The table below shows nutritional values per serving without the additional fillings.
-
-  Calories
-  277kcal
-
-  Carbs
-  0g
-
-  Protein
-  20g
-
-  Fat
-  22g
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="outfit-400">
+  <main aria-roledescription="This contains the actual solution to the challenge">
+    <div id="recipe-page">
+      <img class="recipe-image" src="assets/images/image-omelette.jpeg"
+        alt="A folded omelette on a beige plate, filled with fresh spinach, grilled vegetables, and herbs. Beside the omelette is a dollop of a reddish spread, likely a hummus or puree, sprinkled with black pepper">
+      <div class="wrapper">
+        <h1 class="young-serif-400 x-large stone-900">Simple Omelette Recipe</h1>
+        <p class="outfit-400 stone-600">An easy and quick dish, perfect for any meal. This classic omelette combines
+          beaten eggs
+          cooked
+          to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+        <section class="preparation-time">
+          <h2 class="outfit-600 medium brown-800">Preparation time</h2>
+          <ul class="stone-600">
+            <li class=""><em>Total:</em> Approximately 10 minutes</li>
+            <li class=""><em>Preparation:</em> 5 minutes</li>
+            <li class=""><em>Cooking:</em> 5 minutes</li>
+          </ul>
+        </section>
+        <h2 class="young-serif-400 large brown-800">Ingredients</h2>
+        <ul class="ingredients-list stone-600">
+          <li>2-3 large eggs</li>
+          <li>1 tablespoon of butter or oil</li>
+          <li>Salt, to taste</li>
+          <li>Pepper, to taste</li>
+          <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+        </ul>
+        <section class="instructions">
+          <h2 class="young-serif-400 large brown-800">Instructions</h2>
+          <ol class="instructions-steps">
+            <li id="step-one"><em>Beat the eggs:</em> In a bowl, beat the eggs with a pinch of salt and pepper until
+              they are well
+              mixed.
+              You can add a tablespoon of water or milk for a fluffier texture.</li>
+            <li id="step-two"><em>Heat the pan:</em> Place a non-stick frying pan over medium heat and add butter or
+              oil.</li>
+            <li id="step-three"><em>Cook the omelette:</em> Once the butter is melted and bubbling, pour in the eggs.
+              Tilt the pan to
+              ensure
+              the eggs evenly coat the surface.</li>
+            <li id="step-four"><em>Add fillings (optional):</em> When the eggs begin to set at the edges but are still
+              slightly runny
+              in
+              the
+              middle, sprinkle your chosen fillings over one half of the omelette.</li>
+            <li id="step-five"><em>Fold and serve:</em> As the omelette continues to cook, carefully lift one edge and
+              fold it over
+              the
+              fillings. Let it cook for another minute, then slide it onto a plate.</li>
+            <li id="step-six"><em>Enjoy:</em> Serve hot, with additional salt and pepper if needed.</li>
+          </ol>
+        </section>
+        <section class="nutrition">
+          <h2 class="young-serif-400 large brown-800">Nutrition</h2>
+          <p class="nutrition-intro">The table below shows nutritional values per serving without the additional
+            fillings.</p>
+          <table>
+            <tr>
+              <th>Calories</th>
+              <td class="value outfit-800 brown-800">277kcal</td>
+            </tr>
+            <tr>
+              <th>Carbs</th>
+              <td class="value outfit-800 brown-800">0g</td>
+            </tr>
+            <tr>
+              <th>Protein</th>
+              <td class="value outfit-800 brown-800">20g</td>
+            </tr>
+            <tr>
+              <th>Fat</th>
+              <td class="value outfit-800 brown-800">22g</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer aria-roledescription="This section has attribution and credits">
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
+      <br />Coded by <a href="https://www.emanuele-fabrizio.com/" target="_blank" rel="noreferrer"
+        title="Visit the author's website">Emanuele Fabrizio</a>.
+      <br />Browse the solutions on <a href="https://github.com/efabrizio75/frontend-mentor-challenges" target="_blank"
+        rel="noreferrer" title="Browse the solutions to all my challenges on GitHub">GitHub</a>.
+    </div>
+  </footer>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Recipe",
+      "name": "Simple Omelette Recipe",
+      "image": [
+        "https://efabrizio75.github.io/frontend-mentor-challenges/newbie/recipe=page-main/assets/images/image-omelette.jpeg"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Emanuele Fabrizio"
+      },
+      "datePublished": "2024-08-25",
+      "description": "This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
+      "recipeCuisine": "French",
+      "prepTime": "PT5M",
+      "cookTime": "PT5M",
+      "totalTime": "PT10M",
+      "keywords": "vegan, gluten-free, dairy-free, low-calorie",
+      "recipeYield": "1 serving",
+      "recipeCategory": "Breakfast, light lunch, brunch",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "277 calories",
+        "carbohydrateContent": "0 grams",
+        "proteinContent": "20 grams",
+        "fatContent": "22 grams"
+      },
+      "recipeIngredient": [
+        "2-3 large eggs",
+        "1 tablespoon of butter or oil",
+        "salt, to taste",
+        "pepper, to taste"
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Beat the eggs",
+          "text": "In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.",
+          "url": "https://efabrizio75.github.io/frontend-mentor-challenges/newbie/recipe=page-main/index.html#step-one"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Heat the pan",
+          "text": "Place a non-stick frying pan over medium heat and add butter or oil.",
+          "url": "https://efabrizio75.github.io/frontend-mentor-challenges/newbie/recipe=page-main/index.html#step-two"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Cook the omelette",
+          "text": "Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.",
+          "url": "https://efabrizio75.github.io/frontend-mentor-challenges/newbie/recipe=page-main/index.html#step-three"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Add fillings (optional)",
+          "text": "When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.",
+          "url": "https://efabrizio75.github.io/frontend-mentor-challenges/newbie/recipe=page-main/index.html#step-four"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Fold and serve",
+          "text": "As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.",
+          "url": "https://efabrizio75.github.io/frontend-mentor-challenges/newbie/recipe=page-main/index.html#step-five"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Enjoy",
+          "text": "Serve hot, with additional salt and pepper if needed.",
+          "url": "https://efabrizio75.github.io/frontend-mentor-challenges/newbie/recipe=page-main/index.html#step-six"
+        }
+      ]
+    }
+  </script>
 </body>
+
 </html>
