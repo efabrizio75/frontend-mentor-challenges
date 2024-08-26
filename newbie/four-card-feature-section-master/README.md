@@ -25,7 +25,7 @@ This solution started with a mobile-first approach and it contains responsive ad
 
 ### Solution screenshot
 
-![Solution screenshot](assets/images/solution_1.png)
+![Solution screenshot](images/solution_1.png)
 
 ### Links
 
