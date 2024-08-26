@@ -1,45 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Four card feature section</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Four card feature section @ Frontend Mentor | by Emanuele Fabrizio</title>
+  <meta name="description" content="A feature section page with four cards representing different product tools" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="canonical"
+    href="https://efabrizio75.github.io/frontend-mentor-challenges/newbie/four-card-feature-section-master/" />
 </head>
-<body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+<body class="poppins-400 smaller">
+  <main aria-roledescription="This contains the actual solution to the challenge">
+    <div id="feature-section">
+      <header class="marketing-header">
+        <h1 class="x-large">
+          <span class="poppins-200">Reliable, efficient delivery</span>
+          <span class="poppins-600">Powered by Technology</span>
+        </h1>
+        <p class="blurb poppins-400">
+          Our Artificial Intelligence powered tools use millions of project data points
+          to ensure that your project is successful</p>
+      </header>
+      <section class="cards-wrapper" aria-labelledby="feature-cards">
+        <h2 id="feature-cards" class="visually-hidden">Feature Cards of our Tools</h2>
+        <article class="card p-supervisor">
+          <h2 class="large poppins-600">Supervisor</h2>
+          <p class="small poppins-200">Monitors activity to identify project roadblocks</p>
+          <img class="icon" src="images/icon-supervisor.svg" alt="Magnifying glass icon representing supervision" />
+        </article>
+        <article class="card p-team">
+          <h2 class="large poppins-600">Team Builder</h2>
+          <p class="small poppins-200">Scans our talent network to create the optimal team for your project</p>
+          <img class="icon" src="images/icon-team-builder.svg" alt="House icon representing team building" />
+        </article>
+        <article class=" card p-calculator">
+          <h2 class="large poppins-600">Calculator</h2>
+          <p class="small poppins-200">Uses data from past projects to provide better delivery estimates</p>
+          <img class="icon" src="images/icon-calculator.svg" alt="Calculator icon representing data analysis" />
+        </article>
+        <article class="card p-karma">
+          <h2 class="large poppins-600">Karma</h2>
+          <p class="small poppins-200">Regularly evaluates our talent to ensure quality</p>
+          <img class="icon" src="images/icon-karma.svg" alt="Lightbulb icon representing insightful evaluation" />
+        </article>
+      </section>
+    </div>
+  </main>
+  <footer aria-roledescription="This section has attribution and credits" role="contentinfo">
+    <div class="attribution small">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
+      <br />Coded by <a href="https://www.emanuele-fabrizio.com/" target="_blank" rel="noreferrer"
+        title="Visit the author's website">Emanuele Fabrizio</a>.
+      <br />Browse the solutions on <a href="https://github.com/efabrizio75/frontend-mentor-challenges" target="_blank"
+        rel="noreferrer" title="Browse the solutions to all my challenges on GitHub">GitHub</a>.
+    </div>
   </footer>
 </body>
+
 </html>

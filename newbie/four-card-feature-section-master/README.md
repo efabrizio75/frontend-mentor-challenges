@@ -23,8 +23,6 @@ In the source code you will find what I consider the bare minimum markup and sty
 
 This solution started with a mobile-first approach and it contains responsive adjustment to spacing without modifying font sizes.
 
-It's worth mentioning that I also included structured data about [the recipe in JSON+LD format](https://developers.google.com/search/docs/appearance/structured-data/recipe). This is a way to provide search engines with more information about the content of the page, and it's a good practice to include it in the HTML of the page.
-
 ### Solution screenshot
 
 ![Solution screenshot](assets/images/solution_1.png)
@@ -51,40 +49,35 @@ Final testing includes running axe DevTools extension to check for accessibility
 The basic layout of the entire sections containing cards is this:
 
 ```html
-<div id="recipe-page">
-  <img class="recipe-image" ... />
-  <div class="wrapper">
+<div id="feature-section">
+  <header>
     <h1 />
     <p />
-    <section class="preparation-time">
-      <h2 />
-      <ul >
-    </section>
-    <h2 />
-    <ul class="ingredients-list"/>
-    <section class="instructions">
-      <h2 />
-      <ol class="instructions-steps"/>
-    </section>
-    <section class="nutrition">
-      <h2 />
-      <p />
-      <table />
-    </section>
-  </div>
+  </header>
+  <section class="cards-wrapper">
+    <div class="card">
+      <article>
+        <h2 />
+        <p />
+        <img />
+      </article>
+    </div>
+    <div class="card">...</div>
+    <div class="card">...</div>
+    <div class="card">...</div>
+  </section>
 </div>
 ```
 
 ### What I learned
 
-1. I learned how to tackle image sizing issues, in particular the consequences of specifying the `width` and `height` attributes for an `img` element.
-1. I pursued the "idea" of training more the eye for details, and discovered that the bulltet icons were styled differently; so I decided to apply the color but not to replace the default disc character.
-1. I pursed the "idea" of researching more appropriate tag elements, and opted for the `section` tag: I used it to wrap the various "sections" of the recipe.
-1. Additionally I researched the `Recipe` type on Schema.org and implemented it in the HTML using Google's recommended approach.
-1. I also learned that it's better to specify the spacing by modifying properties directly in rules, rather than creating a singular class with a specific spacing because this latter approach does not work when using @media queries.
+1. I learned how to play with `grid` and `flex` layouts in order to achieve the intended result.
+1. I favored an accessible approach for the choice of elements to use, and opted for the `article` tag instead of just a `div`.
+1. I started using nested rules for the `card` class to avoid repetition.
 
 ### Questions
 
+1. I like to keep the attribution section in all my challenges, but I noticed it interferes with the screenshot. What solution would you suggest?
 
 ### Author
 

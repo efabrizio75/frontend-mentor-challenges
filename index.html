@@ -5,6 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor Challenges - Solutions by Emanuele Fabrizio</title>
+  <style>
+    html {
+      font-size: 16px;
+      --gap: 0.5rem;
+    }
+
+    body {
+      font-size: 1rem;
+    }
+
+    .playground {
+      margin-left: 5rem;
+      max-width: 500px;
+      position: relative;
+    }
+
+    .playground>* {
+      margin-block: 1rem;
+    }
+
+    .flex {
+      display: flex;
+      gap: var(--gap);
+      flex-wrap: wrap;
+      flex-basis: 10rem;
+      outline: 3px double red;
+    }
+
+    .flex>* {
+      flex: 1;
+    }
+
+    .grid {
+      display: grid;
+      gap: var(--gap);
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      outline: 3px double red;
+    }
+
+    p {
+      outline: 1px dotted green;
+      margin: 0;
+      padding: var(--gap);
+    }
+
+    .playground::before {
+      content: "“";
+      position: absolute;
+      top: -1.5rem;
+      left: -1.25rem;
+      font-size: 4rem;
+      font-weight: 900;
+      margin-right: 0.5rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -39,6 +94,22 @@
       <h3>
         <a href="newbie/four-card-feature-section-master/">Four card feature section</a>
       </h3>
+    </section>
+    <section class="playground">
+      <p class="quote">This is an example of how the content drives the rendition of elements within a flex or a grid
+        layout.</p>
+      <div class="flex">
+        <p><a href="newbie/qr-code-component/">QR code component</a></p>
+        <p><a href="newbie/blog-preview-card-main/">Blog preview card component</a></p>
+        <p><a href="newbie/social-links-profile-main/">Social links profile</a></p>
+        <p><a href="newbie/recipe-page-main/">Recipe page</a></p>
+      </div>
+      <div class="grid">
+        <p><a href="newbie/qr-code-component/">QR code component</a></p>
+        <p><a href="newbie/blog-preview-card-main/">Blog preview card component</a></p>
+        <p><a href="newbie/social-links-profile-main/">Social links profile</a></p>
+        <p><a href="newbie/recipe-page-main/">Recipe page</a></p>
+      </div>
     </section>
   </main>
 </body>
