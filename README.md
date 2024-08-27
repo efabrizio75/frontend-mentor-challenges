@@ -1,4 +1,4 @@
-# Welcome to my `frontend-mentor-challenges repository`!
+# Welcome to my `frontend-mentor-challenges` repository!
 
 This repository contains the solutions to the challenges proposed by [Frontend Mentor](https://www.frontendmentor.io/challenges).
 
