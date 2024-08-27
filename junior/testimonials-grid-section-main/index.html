@@ -1,76 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial grid section @ Frontend Mentor | by Emanuele Fabrizio</title>
+  <meta name="description" content="A feature section page with four cards representing different product tools" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+  <link rel="stylesheet" href="styles.css" media="all" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="canonical"
+    href="https://efabrizio75.github.io/frontend-mentor-challenges/junior/testimonials-grid-section-main/" />
 </head>
+
 <body>
-  Daniel Clifford
-  Verified Graduate
-
-  I received a job offer mid-course, and the subjects I learned were current, if not more so, 
-  in the company I joined. I honestly feel I got every penny’s worth.
-
-  “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
-  transition and have heard some people who had an amazing experience here. I signed up 
-  for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
-  The next 12 weeks was the best - and most grueling - time of my life. Since completing 
-  the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”
-
-  Jonathan Walters
-  Verified Graduate
-
-  The team was very supportive and kept me motivated
-
-  “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
-  for a big company. This was one of the best investments I’ve made in myself. ”
-
-  Jeanette Harmon
-  Verified Graduate
-
-  An overall wonderful and rewarding experience
-
-  “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
-  while doing something I love. ”
-
-  Patrick Abrams
-  Verified Graduate
-
-  Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
-  learning from their experiences was easy.
-
-  “ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
-  gave me the confidence necessary to be able to go out in the world and present myself as a capable 
-  junior developer. The standard is above the rest. You will get the personal attention you need from 
-  an incredible community of smart and amazing people. ”
-
-  Kira Whittle
-  Verified Graduate
-
-  Such a life-changing experience. Highly recommended!
-
-  “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
-  professionals who can help me learn programming step by step. I was encouraged to enroll by a former 
-  student of theirs who can only say wonderful things about the program. The entire curriculum and staff 
-  did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team 
-  project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial 
-  could ever have. In fact, I’ve often referred to it during interviews as an example of my developent 
-  experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
-  100% recommend! ”
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <h1 class="visually-hidden">Testimonials grid section</h1>
+  <main aria-roledescription="This contains the actual solution to the challenge">
+    <div id="testimonials-section">
+      <section class="testimonial bg-violet" aria-roledescription="This is a testimonial from a user">
+        <div class="avatar-container">
+          <img src="images/image-daniel.jpg" alt="Daniel Clifford" class="avatar" />
+          <h2>Daniel Clifford</h2>
+          <h3 class="smaller">Verified Graduate</h3>
+        </div>
+        <p class="x-large">
+          I received a job offer mid-course, and the subjects I learned were current, if not more so,
+          in the company I joined. I honestly feel I got every penny's worth.</p>
+        <blockquote>
+          “ I was an EMT for many years before I joined the bootcamp. I've been looking to make a transition and have
+          heard some people who had an amazing experience here. I signed up for the free intro course and found it
+          incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my
+          life. Since completing the course, I've successfully switched careers, working as a Software Engineer at a VR
+          startup. ”</blockquote>
+      </section>
+      <section class="testimonial bg-gray_blue" aria-roledescription="This is a testimonial from a user">
+        <div class="avatar-container">
+          <img src="images/image-jonathan.jpg" alt="Jonathan Walters" class="avatar" />
+          <h2>Jonathan Walters</h2>
+          <h3 class="smaller">Verified Graduate</h3>
+        </div>
+        <p class="x-large">The team was very supportive and kept me motivated</p>
+        <blockquote>“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
+          for a big company. This was one of the best investments I've made in myself. ”
+        </blockquote>
+      </section>
+      <section class="testimonial bg-white col-gray_blue" aria-roledescription="This is a testimonial from a user">
+        <div class="avatar-container">
+          <img src="images/image-jeanette.jpg" alt="Jeanette Harmon" class="avatar" />
+          <h2>Jeanette Harmon</h2>
+          <h3 class="smaller">Verified Graduate</h3>
+        </div>
+        <p class="x-large">An overall wonderful and rewarding experience</p>
+        <blockquote>“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+          while doing something I love. ”</blockquote>
+      </section>
+      <section class="testimonial bg-black_blue" aria-roledescription="This is a testimonial from a user">
+        <div class="avatar-container">
+          <img src="images/image-patrick.jpg" alt="Patrick Abrams" class="avatar" />
+          <h2>Patrick Abrams</h2>
+          <h3 class="smaller">Verified Graduate</h3>
+        </div>
+        <p class="x-large">Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them
+          and
+          learning from their experiences was easy.</p>
+        <blockquote>“ The staff seem genuinely concerned about my progress which I find really refreshing. The program
+          gave me the confidence necessary to be able to go out in the world and present myself as a capable
+          junior developer. The standard is above the rest. You will get the personal attention you need from
+          an incredible community of smart and amazing people. ”</blockquote>
+      </section>
+      <section class="testimonial bg-white col-gray_blue" aria-roledescription="This is a testimonial from a user">
+        <div class="avatar-container">
+          <img src="images/image-kira.jpg" alt="Kira Whittle" class="avatar" />
+          <h2>Kira Whittle</h2>
+          <h3 class="smaller">Verified Graduate</h3>
+        </div>
+        <p class="x-large">Such a life-changing experience. Highly recommended!</p>
+        <blockquote>“ Before joining the bootcamp, I've never written a line of code. I needed some structure from
+          professionals who can help me learn programming step by step. I was encouraged to enroll by a former
+          student of theirs who can only say wonderful things about the program. The entire curriculum and staff
+          did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team
+          project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial
+          could ever have. In fact, I've often referred to it during interviews as an example of my development
+          experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers.
+          100% recommend! ”</blockquote>
+      </section>
+    </div>
+  </main>
+  <footer aria-roledescription="This section has attribution and credits">
+    <div class="attribution small">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>.
+      <br />Coded by <a href="https://www.emanuele-fabrizio.com/" target="_blank" rel="noreferrer"
+        title="Visit the author's website">Emanuele Fabrizio</a>.
+      <br />Browse the solutions on <a href="https://github.com/efabrizio75/frontend-mentor-challenges" target="_blank"
+        rel="noreferrer" title="Browse the solutions to all my challenges on GitHub">GitHub</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
