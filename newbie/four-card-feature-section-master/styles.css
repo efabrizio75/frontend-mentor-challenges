@@ -6,6 +6,11 @@
   --col_blue: #549EF2;
   --col_stone: #4D4F62;
   --col_canvas: #f2f2f2;
+  --fs-x_large: 2.25rem;
+  --fs-larger: 1.5rem;
+  --fs-large: 1.25rem;
+  --fs-smaller: 0.9375rem;
+  --fs-small: 0.8125rem;
 }
 
 .poppins-200 {
@@ -30,19 +35,23 @@
 }
 
 .x-large {
-  font-size: 2.25rem;
+  font-size: var(--fs-xx_large);
+}
+
+.larger {
+  font-size: var(--fs-larger);
 }
 
 .large {
-  font-size: 1.25rem;
+  font-size: var(--fs-large);
 }
 
 .smaller {
-  font-size: 0.9375rem;
+  font-size: var(--fs-smaller);
 }
 
 .small {
-  font-size: 0.8125rem;
+  font-size: var(--fs-small);
 }
 
 *,
@@ -99,18 +108,15 @@ footer a {
 }
 
 #feature-section {
-  max-width: 1200px;
-  margin: 5.625rem auto calc(var(--spacing) * 3.3125) auto;
-  padding: var(--spacing);
+  margin: 5rem auto calc(var(--spacing) * 3.3125) auto;
+  padding: 0 var(--spacing);
 }
 
 .marketing-header {
   text-align: center;
-  max-width: 500px;
   line-height: 1.45;
   text-wrap: balance;
-  margin: 0 auto calc(var(--spacing) * 4);
-  auto;
+  margin: 0 auto calc(var(--spacing) * 4) auto;
 
   & span {
     display: block;
@@ -125,19 +131,19 @@ footer a {
   display: grid;
   align-items: center;
   justify-content: center;
-  gap: calc(var(--spacing) * 1.875);
+  gap: calc(var(--spacing) * 1.5);
 
   & .card {
     background-color: var(--col_white);
     border-radius: calc(var(--spacing) / 2);
-    padding: calc(var(--spacing) * 2);
+    padding: calc(var(--spacing) * 1.75);
     box-shadow: 0 calc(var(--spacing) / 3) calc(var(--spacing) / 1.5) rgba(0, 0, 0, 0.1);
     border-top-width: calc(var(--spacing) / 4);
     border-top-style: solid;
     text-align: left;
     position: relative;
-    max-width: 350px;
-    min-height: 250px;
+    max-width: 311px;
+    min-height: 222px;
 
     & h2 {
       margin-bottom: var(--spacing);
@@ -152,6 +158,8 @@ footer a {
     position: absolute;
     bottom: calc(var(--spacing) * 2);
     right: calc(var(--spacing) * 2);
+    width: 57px;
+    height: 57px;
   }
 
   & .p-team {
@@ -172,31 +180,55 @@ footer a {
 }
 
 @media only screen and (min-width: 768px) {
+  .marketing-header {
+    max-width: 540px;
+  }
+
+  .marketing-header h1 {
+    font-size: var(--fs-x_large);
+  }
+
   .cards-wrapper {
     grid-template-columns: repeat(2, 1fr);
+    gap: calc(var(--spacing) * 1.875);
+
+    & .card {
+      max-width: 350px;
+      min-height: 250px;
+      padding: calc(var(--spacing) * 2);
+    }
+
+    & .card .icon {
+      width: 64px;
+      height: 64px;
+    }
   }
 }
 
 @media only screen and (min-width: 1200px) {
+  #feature-section {
+    max-width: 1200px;
+  }
+
   .cards-wrapper {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "first top last" "first bottom last";
-  }
 
-  .p-team {
-    grid-area: top;
-  }
+    & .p-team {
+      grid-area: top;
+    }
 
-  .p-supervisor {
-    grid-area: first;
-  }
+    & .p-supervisor {
+      grid-area: first;
+    }
 
-  .p-karma {
-    grid-area: bottom;
-  }
+    & .p-karma {
+      grid-area: bottom;
+    }
 
-  .p-calculator {
-    grid-area: last;
+    & .p-calculator {
+      grid-area: last;
+    }
   }
 }
