@@ -20,32 +20,32 @@
     }
 
     .playground {
-      margin-left: 5rem;
-      max-width: 500px;
+      margin-top: 3rem;
+      margin-left: 3rem;
+      max-width: 400px;
       position: relative;
     }
 
     .playground>* {
       margin-block: 1rem;
+      outline: 2px dotted red;
     }
 
     .flex {
       display: flex;
       gap: var(--gap);
       flex-wrap: wrap;
-      flex-basis: 10rem;
-      outline: 3px double red;
     }
 
     .flex>* {
       flex: 1;
+      flex-basis: 7.5rem;
     }
 
     .grid {
       display: grid;
       gap: var(--gap);
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-      outline: 3px double red;
     }
 
     p {
@@ -73,51 +73,74 @@
   </header>
   <main>
     <h2>Newbie</h2>
-    <section>
-      <h3>
-        <a href="newbie/3-column-preview-card-component/">3-column preview card component</a>
-      </h3>
-      <h3>
-        <a href="newbie/product-preview-card-component/">Product preview card component</a>
-      </h3>
-      <h3>
-        <a href="newbie/qr-code-component/">QR code component</a>
-      </h3>
-      <h3>
-        <a href="newbie/results-summary-component/">Results summary component</a>
-      </h3>
-      <h3>
-        <a href="newbie/blog-preview-card-main/">Blog preview card component</a>
-      </h3>
-      <h3>
-        <a href="newbie/social-links-profile-main/">Social links profile</a>
-      </h3>
-      <h3>
-        <a href="newbie/recipe-page-main/">Recipe page</a>
-      </h3>
-      <h3>
-        <a href="newbie/four-card-feature-section-master/">Four card feature section</a>
-      </h3>
-      <h3 class="junior">
-        <a href="junior/testimonials-grid-section-main/">Testimonial grid section</a>
-      </h3>
-    </section>
+    <aside>
+      <ul>
+        <li>
+          <h3>
+            <a href="newbie/3-column-preview-card-component/">3-column preview card component</a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            ✅ <a href="newbie/product-preview-card-component/">Product preview card component</a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            ✅ <a href="newbie/qr-code-component/">QR code component</a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            <a href="newbie/results-summary-component/">Results summary component</a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            ✅ <a href="newbie/blog-preview-card-main/">Blog preview card component</a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            ✅ <a href="newbie/social-links-profile-main/">Social links profile</a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            ✅ <a href="newbie/recipe-page-main/">Recipe page</a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            ✅ <a href="newbie/four-card-feature-section-master/">Four card feature section</a>
+          </h3>
+        </li>
+        <li>
+          <h3 class="junior">
+            ✅ <a href="junior/testimonials-grid-section-main/">Testimonial grid section</a>
+          </h3>
+        </li>
+        <li>
+          <h3>
+            ✅ <a href="newbie/meet-landing-page/">Meet landing page</a>
+          </h3>
+        </li>
+      </ul>
+    </aside>
     <section class="playground">
       <p class="quote">This is an example of how the content drives the rendition of elements within a flex or a grid
         layout.</p>
-      <div class="flex">
+      <div class="flex path">
         <p><a href="newbie/qr-code-component/">QR code component</a></p>
         <p><a href="newbie/blog-preview-card-main/">Blog preview card component</a></p>
         <p><a href="newbie/social-links-profile-main/">Social links profile</a></p>
         <p><a href="newbie/recipe-page-main/">Recipe page</a></p>
-        <p><a href="newbie/four-card-feature-section-master">Four card feature section</a></p>
       </div>
-      <div class="grid">
-        <p><a href="newbie/qr-code-component/">QR code component</a></p>
-        <p><a href="newbie/blog-preview-card-main/">Blog preview card component</a></p>
-        <p><a href="newbie/social-links-profile-main/">Social links profile</a></p>
-        <p><a href="newbie/recipe-page-main/">Recipe page</a></p>
+      <div class="grid path">
+        <p><a href="newbie/product-preview-card-component/">Product preview card component</a></p>
         <p><a href="newbie/four-card-feature-section-master">Four card feature section</a></p>
+        <p><a href="junior/testimonials-grid-section-main/">Testimonials grid section</a></p>
+        <p><a href="newbie/meet-landing-page/">Meet landing page</a></p>
       </div>
     </section>
   </main>

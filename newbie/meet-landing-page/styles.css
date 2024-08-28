@@ -1,0 +1,10 @@
+:root {
+  --col_cyan-600: hsl(192, 37%, 48%);
+  --col_cyan-300: hsl(192, 90%, 77%);
+  --col_purple-600: hsl(268, 34%, 53%);
+  --col_purple-300: hsl(268, 100%, 86%);
+  --col_slate-900: hsl(240, 21%, 20%);
+  --col_slate-600: hsl(240, 10%, 57%);
+  --col_slate-300: hsl(240, 18%, 85%);
+  --col_off-white: hsl(0, 0%, 98%);
+}
