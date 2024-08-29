@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Using background-blend-mode and linear-gradient */
+    #sol-1 {
+      width: 400px;
+
+      & .section {
+        position: relative;
+        padding: 50px;
+        color: white;
+        background-image: url('./assets/mobile/image-footer.jpg');
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      & .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: hsl(192, 37%, 48%);
+        opacity: 0.7;
+        /* Adjust the opacity as needed */
+        z-index: 1;
+        /* Ensure the overlay is above the background but below other content */
+      }
+
+      & .circle {
+        position: relative;
+        top: 20px;
+        /* Adjust based on your design */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: black;
+        z-index: 2;
+        /* Ensure the circle is above the overlay */
+      }
+    }
+
+    /* Using CSS filter with ::before Pseudo-element  */
+    #sol-2 {
+      width: 400px;
+
+      & .section-filter {
+        position: relative;
+        padding: 50px;
+        color: white;
+        overflow: hidden;
+      }
+
+      & .section-filter::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('./assets/mobile/image-footer.jpg') center/cover;
+        filter: brightness(50%) saturate(150%) hue-rotate(180deg);
+        z-index: -1;
+      }
+
+      & .circle {
+        position: absolute;
+        top: -25px;
+        /* Adjust based on your design */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: black;
+      }
+    }
+
+    /* Using background and opacity with ::after Pseudo-element */
+    #sol-3 {
+      width: 400px;
+
+      & .section-opacity {
+        position: relative;
+        padding: 50px;
+        color: white;
+        overflow: hidden;
+      }
+
+      & .section-opacity::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('./assets/mobile/image-footer.jpg') center/cover;
+        opacity: 0.5;
+        z-index: -1;
+      }
+
+      & .circle {
+        position: absolute;
+        top: -25px;
+        /* Adjust based on your design */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: black;
+      }
+    }
+
+    /* Using CSS Grid with Overlaying Layers */
+    #sol-4 {
+      width: 400px;
+
+      & .section-grid {
+        display: grid;
+        grid-template-areas: 'background';
+        position: relative;
+        padding: 50px;
+        color: white;
+      }
+
+      & .section-grid::before {
+        content: '';
+        grid-area: background;
+        background: url('./assets/mobile/image-footer.jpg') center/cover;
+        opacity: 0.6;
+        z-index: -1;
+      }
+
+      & .circle {
+        position: absolute;
+        top: -25px;
+        /* Adjust based on your design */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: black;
+      }
+    }
+
+    /* Using CSS mix-blend-mode with Two Div Elements */
+    #sol-5 {
+      width: 400px;
+
+      & .section-blend {
+        position: relative;
+        overflow: hidden;
+        padding: 50px;
+        color: white;
+      }
+
+      & .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('./assets/mobile/image-footer.jpg') center/cover;
+        z-index: -1;
+        mix-blend-mode: multiply;
+      }
+
+      & .content {
+        position: relative;
+        z-index: 1;
+      }
+
+      & .circle {
+        position: absolute;
+        top: -25px;
+        /* Adjust based on your design */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: black;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="sol-1">
+    <div class="section">
+      <div class="overlay"></div>
+      <div class="circle">
+        <span>02</span>
+      </div>
+      <!-- Content goes here -->
+      <h2 class="f-preset-1">Experience more together</h2>
+      <p class="blurb">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+      </p>
+      <div class="action-items">
+        <button class="action secondary f-preset-5">Download <span class="purple-300">v1.3</span></button>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div id="sol-2">
+    <div class="section section-filter">
+      <div class="circle">
+        <span>02</span>
+      </div>
+      <!-- Content goes here -->
+      <h2 class="f-preset-1">Experience more together</h2>
+      <p class="blurb">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+      </p>
+      <div class="action-items">
+        <button class="action secondary f-preset-5">Download <span class="purple-300">v1.3</span></button>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div id="sol-3">
+    <div class="section section-opacity">
+      <div class="circle">
+        <span>02</span>
+      </div>
+      <!-- Content goes here -->
+      <h2 class="f-preset-1">Experience more together</h2>
+      <p class="blurb">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+      </p>
+      <div class="action-items">
+        <button class="action secondary f-preset-5">Download <span class="purple-300">v1.3</span></button>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div id="sol-4">
+    <div class="section section-grid">
+      <div class="circle">
+        <span>02</span>
+      </div>
+      <!-- Content goes here -->
+      <h2 class="f-preset-1">Experience more together</h2>
+      <p class="blurb">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+      </p>
+      <div class="action-items">
+        <button class="action secondary f-preset-5">Download <span class="purple-300">v1.3</span></button>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div id="sol-5">
+    <div class="section section-blend">
+      <div class="background-image"></div>
+      <div class="content">
+        <div class="circle">
+          <span>02</span>
+        </div>
+        <!-- Content goes here -->
+        <h2 class="f-preset-1">Experience more together</h2>
+        <p class="blurb">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
+        </p>
+        <div class="action-items">
+          <button class="action secondary f-preset-5">Download <span class="purple-300">v1.3</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
