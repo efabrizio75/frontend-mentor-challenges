@@ -13,6 +13,7 @@
   --ff-root: "Red Hat Display", sans-serif;
   --line-length: 80px;
   --circle-diameter: 56px;
+  --spacing: 16px;
 }
 
 .red-hat-display-400 {
@@ -126,7 +127,6 @@ html {
 }
 
 body {
-  --spacing: 1rem;
   font-family: var(--ff-root);
   font-size: var(--fs-root);
   font-weight: var(--fw-root);
@@ -180,6 +180,15 @@ header {
   max-inline-size: unset;
 }
 
+.hero-double {
+  display: none;
+}
+
+.hero-text {
+  max-width: 88%;
+  margin: 0 auto;
+}
+
 .design-hero-combined {
   margin: 0 calc(var(--spacing) * 2) calc(var(--spacing) * 2);
 }
@@ -222,7 +231,7 @@ header {
 }
 
 .text-content {
-  margin-top: calc(var(--spacing) * 4);
+  margin: calc(var(--spacing) * 4) auto 0 auto;
 
   & .slogan {
     font-size: calc(var(--fs-root) * 0.675);
@@ -324,4 +333,141 @@ h2 {
 .secondary {
   background-color: var(--col_purple-600);
   color: var(--col_white);
+}
+
+@media only screen and (min-width: 600px) {
+  .hero-text {
+    max-width: 73%;
+    margin: 0 auto;
+  }
+
+  .hero-text h2 {
+    margin-top: calc(var(--spacing) * 4.5);
+  }
+
+  .text-content {
+    width: 76%;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .hero {
+    margin: 0;
+    max-inline-size: 100%;
+  }
+
+  .hero-text {
+    max-width: 58%;
+    margin: 0 auto;
+  }
+
+  .image-collage {
+    gap: calc(var(--spacing) * 1.5);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .text-content {
+    width: 66%;
+  }
+
+  .footer-hero {
+    background-image: url("./assets/tablet/image-footer.jpg");
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .hero {
+    margin: 0;
+    width: 100%;
+  }
+
+  .hero-text {
+    max-width: 55%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .design-hero-combined {
+    display: flex;
+    gap: calc(var(--spacing) * 2);
+    margin: 0 auto;
+    padding: 0;
+    max-width: 82%;
+    min-height: 360px;
+  }
+
+  .hero-text {
+    width: 27%;
+  }
+
+  .hero-text h2 {
+    margin-top: calc(var(--spacing) * 1.5);
+  }
+
+  .hero-text .blurb {
+    margin: calc(var(--spacing) * 2) 0;
+  }
+
+  .single {
+    display: none;
+  }
+
+  .hero-double {
+    display: block;
+    align-self: flex-start;
+  }
+
+  .hero-double:last-child {
+    align-self: flex-end;
+  }
+
+  .design-main {
+    width: 82%;
+    margin: 0 auto;
+
+    & .image-collage {
+      gap: calc(var(--spacing) * 2);
+    }
+
+    & .text-content {
+      width: 46%;
+    }
+  }
+
+  .footer-hero {
+    background-image: url("./assets/desktop/image-footer.jpg");
+    padding: calc(var(--spacing) * 7) calc(var(--spacing) * 5);
+    text-align: left;
+  }
+
+  .footer-hero .text-content {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 4fr 3fr 2fr;
+    gap: calc(var(--spacing) * 2);
+    align-items: start;
+
+    & h2 {
+      margin: 0;
+    }
+
+    & .blurb {
+      margin: 0;
+      font-size: calc(var(--fs-root) * 1.125);
+      )
+    }
+
+    & .action-items {
+      margin-left: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 1990px) {
+  .design-hero-combined {
+    max-width 70%;
+  }
 }
