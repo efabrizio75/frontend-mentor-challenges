@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Meet landing page</title>
+  <title>Meet landing page @ Frontend Mentor | by Emanuele Fabrizio</title>
+  <meta name="description" content="A feature section page with four cards representing different product tools" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+  <link rel="stylesheet" href="styles.css" media="all" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="canonical" href="https://efabrizio75.github.io/frontend-mentor-challenges/newbie/meet-landing-page/" />
 </head>
+
 <body>
-  Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
-
-  Download v1.3
-  What is it?
-
-  01
-  Built for modern use
-
-  Smarter meetings, all in one place
-
-  Send messages, share files, show your screen, and record your meetings — all in one 
-  workspace. Control who can join with invite-only team access, data encryption, and data export.
-
-  02
-  Experience more together
-  Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
-
-  Download v1.3
+  <main aria-roledescription="This contains the actual solution to the challenge">
+    <div id="meet-landing-page">
+      <header>
+        <img src="./assets/logo.svg" alt="Meet logo" />
+        <h1 class="visually-hidden">Meet</h1>
+      </header>
+      <img class="hero" decoding="async" src="./assets/tablet/image-hero.png" width="820" height="303"
+        alt="A collage of diverse individuals' headshots from various ethnic backgrounds arranged in a circular pattern. There are ten people, both men and women, with different hairstyles and expressions, ranging from smiling to neutral." />
+      <h2 class="f-preset-1">Group Chat for Everyone</h2>
+      <p class="blurb f-preset-5">Meet makes it easy to connect with others face-to-face virtually and collaborate
+        across any
+        device.
+      </p>
+      <div class="action-items">
+        <button class="action primary f-preset-5">Download <span class="cyan-300">v1.3</span></button>
+        <button class="action secondary f-preset-5">What is it?</button>
+      </div>
+      <div class="step">01</div>
+      <p>Built for modern use</p>
+      <h2>Smarter meetings, all in one place</h2>
+      <p class="blurb">Send messages, share files, show your screen, and record your meetings — all in one workspace.
+        Control who can join with invite-only team access, data encryption, and data export.</p>
+      <div class="step">02</div>
+      <h2>Experience more together</h2>
+      <p class="blurb">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
+      <button>Download <span class="version">v1.3</span></button>
+    </div>
+  </main>
+  <!-- The following script is used by Responsively App to enable live editing -->
+  <script async id="__bs_script__" src="https://localhost:12719/browser-sync/browser-sync-client.js?v=2.29.1"></script>
 </body>
+
 </html>
