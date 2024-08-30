@@ -357,7 +357,7 @@ h2 {
   }
 
   .hero-text {
-    max-width: 58%;
+    width: 58%;
     margin: 0 auto;
   }
 
@@ -382,7 +382,7 @@ h2 {
   }
 
   .hero-text {
-    max-width: 55%;
+    width: 55%;
     margin: 0 auto;
   }
 }
@@ -393,12 +393,12 @@ h2 {
     gap: calc(var(--spacing) * 2);
     margin: 0 auto;
     padding: 0;
-    max-width: 82%;
+    max-width: 90%;
     min-height: 360px;
   }
 
   .hero-text {
-    width: 27%;
+    width: 45%;
   }
 
   .hero-text h2 {
@@ -468,8 +468,12 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 1990px) {
+@media only screen and (min-width: 1900px) {
   .design-hero-combined {
-    max-width 70%;
+    max-width: 90%;
+  }
+
+  .hero-text {
+    width: 40%;
   }
 }
