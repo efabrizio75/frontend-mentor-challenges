@@ -11,7 +11,6 @@ This is a solution to the [Meet landing page](https://www.frontendmentor.io/chal
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
-    - [Layout](#layout)
     - [What I learned](#what-i-learned)
     - [Questions](#questions)
     - [Author](#author)
@@ -40,7 +39,7 @@ This solution started with a mobile-first approach and it contains responsive ad
 
 ### Solution screenshot
 
-![Solution screenshot](.assets/solution-screenshot.png)
+![Solution screenshot](./assets/solution_01.png)
 
 ### Links
 
@@ -60,31 +59,10 @@ Final testing includes running axe DevTools extension to check for accessibility
 - Mobile-first workflow
 - axe-core 4.10
 
-### Layout
-
-The basic layout of the entire sections containing cards is this:
-
-```html
- <div id="testimonials-section">
-  <section class="testimonial">
-    <div class="avatar-container">
-      <img class="avatar" ... />
-      <h2 />
-      <h3 class="smaller" />
-    </div>
-    <p class="x-large" />
-    <blockquote />
-  </section>
-</div>
-```
 
 ### What I learned
 
-
-
 ### Questions
-
-
 
 ### Author
 
