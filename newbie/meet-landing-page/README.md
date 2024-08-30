@@ -62,6 +62,9 @@ Final testing includes running axe DevTools extension to check for accessibility
 
 ### What I learned
 
+1. I learned that the wrong choice of initial layout causes issues with responsive design. In my case the biggest problem is around the hero section, with the fact that I utilized `img` elements rather than background images.
+2. I learned that it is possible to include multiple images in a single `background-image` property value, by separating them with a comma [MDN Article](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds).
+
 ### Questions
 
 ### Author
