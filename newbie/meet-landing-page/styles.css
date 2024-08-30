@@ -169,7 +169,7 @@ iframe {
 }
 
 #meet-landing-page {
-  margin: calc(var(--spacing) * 3) auto 0;
+  margin: 0 auto;
   text-align: center;
   overflow: hidden;
 }
@@ -390,6 +390,10 @@ h2 {
 }
 
 @media only screen and (min-width: 54rem) {
+  header {
+    margin-top: calc(var(--spacing) * 5);
+  }
+
   .design-hero-combined {
     display: flex;
     gap: calc(var(--spacing) * 2);
@@ -413,6 +417,11 @@ h2 {
     display: block;
     align-self: flex-start;
   }
+
+  .design-main {
+    margin: calc(var(--spacing) * 6.5) auto 0 auto;
+    padding: 0;
+  }
 }
 
 @media only screen and (min-width: 62rem) {
@@ -435,7 +444,6 @@ h2 {
 
   .design-main {
     width: 82%;
-    margin: 0 auto;
 
     .image-collage {
       gap: calc(var(--spacing) * 2);
@@ -443,6 +451,7 @@ h2 {
 
     .text-content {
       width: 46%;
+      margin-bottom: calc(var(--spacing) * 4.5);
     }
   }
 
