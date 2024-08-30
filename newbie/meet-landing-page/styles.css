@@ -403,6 +403,8 @@ h2 {
 
   .hero-text h2 {
     margin-top: calc(var(--spacing) * 1.5);
+    font-size: calc(var(--fs-root) * 4);
+    )
   }
 
   .hero-text .blurb {
