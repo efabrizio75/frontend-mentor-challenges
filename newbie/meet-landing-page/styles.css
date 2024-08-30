@@ -8,6 +8,8 @@
   --col_slate-300: hsl(240, 18%, 85%);
   --col_off-white: hsl(0, 0%, 98%);
   --col_white: hsl(0, 0%, 100%);
+  --col_cyan_hover: #71C0D4;
+  --col_purple_hover: #B18BDD;
   --fs-root: 16px;
   --fw-root: 400;
   --ff-root: "Red Hat Display", sans-serif;
@@ -213,12 +215,12 @@ header {
   display: grid;
   place-items: center;
 
-  & .line {
+  .line {
     height: var(--line-length);
     border: 1px solid var(--col_slate-300);
   }
 
-  & .step {
+  .step {
     display: inline-block;
     width: var(--circle-diameter);
     height: var(--circle-diameter);
@@ -233,7 +235,7 @@ header {
 .text-content {
   margin: calc(var(--spacing) * 4) auto 0 auto;
 
-  & .slogan {
+  .slogan {
     font-size: calc(var(--fs-root) * 0.675);
     font-weight: 900;
     color: var(--col_cyan-600);
@@ -241,7 +243,7 @@ header {
     text-transform: uppercase;
   }
 
-  & h2 {
+  h2 {
     margin-top: calc(var(--spacing) * 1);
     margin-bottom: calc(var(--spacing) * 2);
     text-wrap: balance;
@@ -252,11 +254,11 @@ header {
   color: var(--col_white);
   position: relative;
 
-  & .line {
+  .line {
     height: calc(var(--line-length) + var(--circle-diameter) / 2);
   }
 
-  & .step {
+  .step {
     color: var(--col_slate-600);
     background-color: var(--col_white);
     border: 1px solid var(--col_slate-600);
@@ -271,7 +273,7 @@ header {
     z-index: 10;
   }
 
-  & .blurb {
+  .blurb {
     color: var(--col_white);
   }
 }
@@ -284,7 +286,8 @@ header {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  z-index: -16;
+  /* Ensure the overlay is behind */
+  z-index: 0;
 }
 
 .footer-hero-overlay {
@@ -322,6 +325,7 @@ h2 {
   padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2.65);
   border: unset;
   border-radius: calc(var(--spacing) * 1.825);
+  cursor: pointer;
 }
 
 .primary {
@@ -330,9 +334,17 @@ h2 {
   color: var(--col_white);
 }
 
+.primary:hover {
+  background-color: var(--col_cyan_hover);
+}
+
 .secondary {
   background-color: var(--col_purple-600);
   color: var(--col_white);
+}
+
+.secondary:hover {
+  background-color: var(--col_purple_hover);
 }
 
 @media only screen and (min-width: 600px) {
@@ -404,7 +416,6 @@ h2 {
   .hero-text h2 {
     margin-top: calc(var(--spacing) * 1.5);
     font-size: calc(var(--fs-root) * 4);
-    )
   }
 
   .hero-text .blurb {
@@ -428,11 +439,11 @@ h2 {
     width: 82%;
     margin: 0 auto;
 
-    & .image-collage {
+    .image-collage {
       gap: calc(var(--spacing) * 2);
     }
 
-    & .text-content {
+    .text-content {
       width: 46%;
     }
   }
@@ -452,17 +463,17 @@ h2 {
     gap: calc(var(--spacing) * 2);
     align-items: start;
 
-    & h2 {
+    h2 {
       margin: 0;
     }
 
-    & .blurb {
+    .blurb {
       margin: 0;
       font-size: calc(var(--fs-root) * 1.125);
       )
     }
 
-    & .action-items {
+    .action-items {
       margin-left: auto;
     }
   }
