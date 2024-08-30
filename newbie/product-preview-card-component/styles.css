@@ -54,7 +54,8 @@ img {
 main {
   align-items: center;
   display: flex;
-  min-height: 100vh; /* necessary for vertically centering the content */
+  min-height: 100vh;
+  /* necessary for vertically centering the content */
   margin: 0 auto;
 }
 
@@ -138,7 +139,7 @@ footer {
   background-color: var(--col_deep_aqua_hover);
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 40rem) {
   main {
     align-items: center;
     justify-content: center;
@@ -150,6 +151,7 @@ footer {
     border-radius: 10px;
     background: var(--col_white);
   }
+
   #product-card .product-image {
     min-height: 100%;
     width: 345px;

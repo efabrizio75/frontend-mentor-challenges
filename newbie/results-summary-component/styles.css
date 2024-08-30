@@ -1,8 +1,8 @@
 :root {
-	--col_red: hsl(0, 100%, 67%);
-	--col_yellow: hsl(39, 100%, 56%);
-	--col_teal: hsl(166, 100%, 37%);
-	--col_blue: hsl(234, 85%, 45%);
+   --col_red: hsl(0, 100%, 67%);
+   --col_yellow: hsl(39, 100%, 56%);
+   --col_teal: hsl(166, 100%, 37%);
+   --col_blue: hsl(234, 85%, 45%);
    --col_white: hsl(0, 0%, 100%);
    --col_black: hsl(0, 0%, 0%);
    --col_pale: hsl(221, 100%, 96%);
@@ -22,39 +22,42 @@ html {
    -moz-box-sizing: border-box;
    box-sizing: border-box;
    min-height: 512px;
-	height: 100%;
-	width: 100%;
+   height: 100%;
+   width: 100%;
    font-size: 18px;
- }
+}
 
- *, *:before, *:after {
+*,
+*:before,
+*:after {
    -webkit-box-sizing: inherit;
    -moz-box-sizing: inherit;
    box-sizing: inherit;
- }
- 
+}
+
 body {
-	height: 100%;
-	width: 100%;
+   height: 100%;
+   width: 100%;
    background-color: var(--col_lavender);
-	font-family: 'Hanken Grotesk', Arial, Helvetica,sans-serif;
+   font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
    font-weight: 400;
-	font-size: 100%;
-	text-align: center;
+   font-size: 100%;
+   text-align: center;
 }
 
 main {
-	align-items: flex-start;
-	display: flex;
-	width: 100%;
-   min-height: 100vh; /* necessary for vertically centering the content */
+   align-items: flex-start;
+   display: flex;
+   width: 100%;
+   min-height: 100vh;
+   /* necessary for vertically centering the content */
 }
 
 #results-panel {
    display: flex;
    flex-direction: column;
    margin: 0 auto;
-	background-color: var(--col_white);
+   background-color: var(--col_white);
 }
 
 #results-panel .summary {
@@ -76,7 +79,7 @@ main {
    height: 140px;
    border-radius: 50%;
    margin: 0 auto 1.6rem;
-   background-image: linear-gradient(hsla(256, 72%, 46%, 1),  hsla(241, 72%, 46%, 0));
+   background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
 }
 
 .summary .score-box .score-value {
@@ -203,12 +206,12 @@ footer .attribution a {
    color: hsl(228, 95%, 25%);
 }
 
-@media only screen and (min-width: 736px) {
+@media only screen and (min-width: 46rem) {
    main {
       align-items: center;
       justify-content: center;
    }
-   
+
    #results-panel {
       width: 736px;
       height: 512px;
@@ -223,7 +226,7 @@ footer .attribution a {
 
    #results-panel .summary .score-box {
       width: 200px;
-      height: 200px;  
+      height: 200px;
    }
 
    #results-panel .summary .score-box .score-value {
@@ -233,10 +236,11 @@ footer .attribution a {
 
    #results-panel .summary .score-box .score-max {
       top: 90px;
-      right: 44px;      
+      right: 44px;
    }
 
-   #results-panel .summary div, #results-panel .details div {
+   #results-panel .summary div,
+   #results-panel .details div {
       padding: var(--panel-top-gutter) 2.2rem;
    }
 
@@ -247,7 +251,7 @@ footer .attribution a {
    #results-panel .details p .value {
       width: 1.4rem;
    }
-   
+
    #results-panel .details p .score.max {
       width: 2.6rem;
    }

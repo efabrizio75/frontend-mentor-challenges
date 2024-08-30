@@ -349,7 +349,7 @@ h2 {
   background-color: var(--col_purple_hover);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37rem) {
   .hero-text {
     max-width: 73%;
     margin: 0 auto;
@@ -364,7 +364,7 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 44rem) {
   .hero {
     left: -10%;
     max-inline-size: 125%;
@@ -389,7 +389,7 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 54rem) {
   .design-hero-combined {
     display: flex;
     gap: calc(var(--spacing) * 2);
@@ -415,14 +415,14 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 62rem) {
   .hero-text h2 {
     margin-top: calc(var(--spacing) * 1.5);
     font-size: calc(var(--fs-root) * 4);
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 75rem) {
   .design-hero-combined {
     width: 110%;
     left: -4%;
@@ -477,7 +477,7 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 90rem) {
   .design-hero-combined {
     max-width: 100%;
     left: unset;
@@ -485,7 +485,7 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 1900px) {
+@media only screen and (min-width: 120rem) {
   .design-hero-combined {
     max-width: 70%;
   }

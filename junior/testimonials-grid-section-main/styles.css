@@ -153,7 +153,7 @@ footer a {
   }
 }
 
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 35rem) {
   #testimonials-section {
     margin: 10.25rem auto;
     padding: var(--spacing);
@@ -167,7 +167,7 @@ footer a {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 75rem) {
   #testimonials-section {
     max-width: 1200px;
     max-height: 572px;

@@ -138,13 +138,13 @@ span[class~="sr-only"] {
   margin: -1px;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 960px) {
+@media only screen and (min-width: 23rem) and (max-width: 60rem) {
   #preview-cards {
     flex-direction: row;
   }
 }
 
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 60rem) {
   main {
     align-items: center;
   }

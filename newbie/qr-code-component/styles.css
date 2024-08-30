@@ -5,13 +5,14 @@
 	--col_dblue: hsl(218, 44%, 22%);
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 25rem) {
 	#qr-card {
 		max-width: 380px;
 	}
 }
 
-html, body {
+html,
+body {
 	font-size: 15px;
 	height: 100%;
 	width: 100%;
@@ -55,7 +56,8 @@ footer {
 	border-radius: 1em;
 }
 
-#qr-card p, #qr-card h1 {
+#qr-card p,
+#qr-card h1 {
 	margin: 4vh 0;
 	letter-spacing: 0.05em;
 }
