@@ -149,7 +149,7 @@ main {
 video,
 img,
 iframe {
-  max-inline-size: 100%;
+  max-width: 100%;
   block-size: auto;
   object-fit: contain;
 }
@@ -171,6 +171,7 @@ iframe {
 #meet-landing-page {
   margin: calc(var(--spacing) * 3) auto 0;
   text-align: center;
+  overflow: hidden;
 }
 
 header {
@@ -180,10 +181,15 @@ header {
 
 }
 
+.design-hero-combined {
+  margin: 0 calc(var(--spacing) * 2) calc(var(--spacing) * 2);
+}
+
 .hero {
-  margin-left: calc(var(--spacing) * -2);
-  width: calc(100% + calc(var(--spacing) * 4));
-  max-inline-size: unset;
+  display: block;
+  max-inline-size: 140%;
+  position: relative;
+  left: -20%;
 }
 
 .hero-double {
@@ -193,10 +199,6 @@ header {
 .hero-text {
   max-width: 88%;
   margin: 0 auto;
-}
-
-.design-hero-combined {
-  margin: 0 calc(var(--spacing) * 2) calc(var(--spacing) * 2);
 }
 
 .design-main {
@@ -362,10 +364,10 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 700px) {
   .hero {
-    margin: 0;
-    max-inline-size: 100%;
+    left: -10%;
+    max-inline-size: 125%;
   }
 
   .hero-text {
@@ -387,35 +389,16 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 900px) {
-  .hero {
-    margin: 0;
-    width: 100%;
-  }
-
-  .hero-text {
-    width: 55%;
-    margin: 0 auto;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 860px) {
   .design-hero-combined {
     display: flex;
     gap: calc(var(--spacing) * 2);
     margin: 0 auto;
     padding: 0;
-    max-width: 90%;
+    width: 133%;
+    left: -16%;
+    position: relative;
     min-height: 360px;
-  }
-
-  .hero-text {
-    width: 45%;
-  }
-
-  .hero-text h2 {
-    margin-top: calc(var(--spacing) * 1.5);
-    font-size: calc(var(--fs-root) * 4);
   }
 
   .hero-text .blurb {
@@ -429,6 +412,21 @@ h2 {
   .hero-double {
     display: block;
     align-self: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .hero-text h2 {
+    margin-top: calc(var(--spacing) * 1.5);
+    font-size: calc(var(--fs-root) * 4);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .design-hero-combined {
+    width: 110%;
+    left: -4%;
+    position: relative;
   }
 
   .hero-double:last-child {
@@ -479,9 +477,17 @@ h2 {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .design-hero-combined {
+    max-width: 100%;
+    left: unset;
+    position: unset;
+  }
+}
+
 @media only screen and (min-width: 1900px) {
   .design-hero-combined {
-    max-width: 90%;
+    max-width: 70%;
   }
 
   .hero-text {
