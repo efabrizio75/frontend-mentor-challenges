@@ -1,0 +1,62 @@
+:root {
+  --col_cyan_strong: hsl(171, 66%, 44%);
+  --col_blue_light: hsl(233, 100%, 69%);
+  --col_gray_dark: hsl(210, 10%, 33%);
+  --col_gray: hsl(201, 11%, 66%);
+  --ff-root: "Bai Jamjuree", sans-serif;
+  --fs-root: 16px;
+  --fs-18: calc(var(--fs-root) * 1.125);
+  --fs-24: calc(var(--fs-root) * 1.5);
+  --fs-28: calc(var(--fs-root) * 1.75);
+  --fs-32: calc(var(--fs-root) * 2);
+  --fw-regular: 400;
+  --fw-semi_bold: 600;
+}
+
+.bai-jamjuree-light {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.bai-jamjuree-regular {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bai-jamjuree-medium {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.bai-jamjuree-semibold {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.bai-jamjuree-light-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.bai-jamjuree-regular-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bai-jamjuree-medium-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.bai-jamjuree-semibold-italic {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
