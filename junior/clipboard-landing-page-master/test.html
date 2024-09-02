@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+  <style>
+    html {
+      font-size: 16px;
+    }
+
+    #root>* {
+      outline: 1px dotted red;
+      max-width: 1440px;
+    }
+
+    footer>* {
+      outline: 2px dashed green;
+    }
+
+    footer nav li {
+      outline: 1px solid blue;
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    footer nav {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 2rem;
+    }
+
+    footer nav ul {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer nav ul>* {}
+
+    .socials {
+      display: flex;
+      justify-content: space-between;
+      width: 10rem;
+
+      >img {
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <main></main>
+    <footer>
+      <nav class="nav">
+        <img src="images/logo.svg" width="55" height="55" />
+        <ul>
+          <li>FAQs</li>
+          <li>Contact Us</li>
+          <li>Privacy Policy</li>
+          <li>Press Kit</li>
+          <li>Install Guide</li>
+        </ul>
+      </nav>
+      <div class="socials">
+        <img src="images/icon-facebook.svg" width="24" height="24" />
+        <img src="images/icon-twitter.svg" width="24" height="24" />
+        <img src="images/icon-instagram.svg" width="24" height="24" />
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
