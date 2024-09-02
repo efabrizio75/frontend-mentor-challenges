@@ -2,7 +2,15 @@
   --col_cyan_strong: hsl(171, 66%, 44%);
   --col_blue_light: hsl(233, 100%, 69%);
   --col_gray_dark: hsl(210, 10%, 33%);
-  --col_gray: hsl(201, 11%, 66%);
+  --col_gray: #979797;
+
+  --col_gray_for_white: #6f787c;
+  /* Instead of #9EABB2 */
+  --col_cyan_for_white: #188574;
+  /* Instead of #26BBA4 */
+  --col_blue_light_for_white: #586AEA;
+  /* Instead of #6174FF */
+  --col_white: hsl(0, 0%, 100%);
   --ff-root: "Bai Jamjuree", sans-serif;
   --fs-root: 16px;
   --fs-18: calc(var(--fs-root) * 1.125);
@@ -60,3 +68,201 @@
   font-weight: 600;
   font-style: italic;
 }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: var(--fs-root);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  --spacing: 1rem;
+  font-family: var(--ff-body);
+  font-size: var(--fs-root);
+  font-weight: var(--fw-regular);
+  color: var(--col_gray_dark);
+  background-color: #000;
+
+  .visually-hidden {
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  #clipboard-landing-page {
+    margin: 0 auto;
+    text-align: center;
+    container-type: inline-size;
+  }
+
+  header,
+  .hero,
+  .shoutout,
+  .tools,
+  .brands,
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*
+#clipboard-landing-page {
+  footer .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  footer nav a {
+    display: block;
+    margin: 1rem 0;
+    color: var(--col_gray_dark);
+  }
+
+  footer .social-links {
+    display: flex;
+    align-self: stretch;
+    justify-content: space-between;
+  }
+}
+*/
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.125rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--col_gray);
+  }
+
+  footer .logo {
+    flex: 0 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer .logo img {
+    max-width: 55px;
+  }
+
+  footer nav {
+    flex: 2 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    max-width: 35rem;
+  }
+
+  footer nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--col_gray_dark);
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+
+  footer nav a:hover {
+    color: #1e90ff;
+  }
+
+  footer .social-links {
+    flex: 0 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    min-width: 10rem;
+  }
+
+  footer .social-links a {
+    font-size: 1.5rem;
+  }
+
+  footer .social-links a:hover {
+    color: #1e90ff;
+  }
+
+  /* Add container query to handle responsiveness */
+  @container (min-width: 480px) {
+    footer {
+      flex-direction: row;
+    }
+
+    footer .logo {
+      flex: 0 1 7.5rem;
+    }
+
+    footer nav {
+      text-align: left;
+    }
+
+    footer .social-links {
+      flex: 0 2 7.5rem;
+      min-width: unset;
+    }
+
+    footer nav {
+      border: 3px solid blue;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(160px, 1fr));
+    }
+  }
+
+  /*
+.auto-grid {
+  --min-column-size: 20rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+}
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flex-grid>* {
+  flex: 1 1 20rem;
+}
+
+.horizontal-reel {
+  --col-gap-size: 1rem;
+  display: grid;
+  gap: var(--col-gap-size);
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: var(--col-gap-size);
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - var(--col-gap-size) / 2);
+}
+
+.horizontal-reel>* {
+  scroll-snap-align: start;
+}
+*/
