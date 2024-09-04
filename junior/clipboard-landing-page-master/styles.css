@@ -203,6 +203,18 @@ p {
   letter-spacing: 0.05ch;
 }
 
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.hero .features {
+  flex-shrink: 1;
+}
+
 .shoutout {
   margin: 10rem auto 4rem auto;
 }
@@ -311,6 +323,21 @@ footer .social-links {
   min-width: 10rem;
 }
 
+.social-links svg {
+  fill: var(--col_gray_dark);
+}
+
+.social-links a svg {
+  transition: fill 0.45s ease;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.social-links a:hover svg {
+  fill: var(--col_cyan_strong);
+  cursor: pointer;
+}
+
 footer .social-links img:hover {
   color: var(--col_cyan_strong);
   cursor: pointer;
@@ -373,36 +400,20 @@ footer .social-links img:hover {
   }
 }
 
-/*
-.auto-grid {
-  --min-column-size: 20rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
-}
+@container (min-width: 1350px) {
+  .hero {
+    padding-left: 0;
+    gap: 6.875rem;
+    align-items: end;
+  }
 
-.flex-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+  .hero-img {
+    margin-left: -3rem;
+    max-width: unset;
+  }
 
-.flex-grid>* {
-  flex: 1 1 20rem;
-}
-
-.horizontal-reel {
-  --col-gap-size: 1rem;
-  display: grid;
-  gap: var(--col-gap-size);
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-padding: var(--col-gap-size);
-  grid-auto-flow: column;
-  grid-auto-columns: calc(50% - var(--col-gap-size) / 2);
-}
-
-.horizontal-reel>* {
-  scroll-snap-align: start;
-}
-*/
+  .features {
+    text-align: left;
+    flex-basis: 21rem;
+    max-width: 21rem;
+  }
