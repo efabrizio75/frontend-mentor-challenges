@@ -23,6 +23,7 @@
 
   --box_730: 50rem;
   --box_1110: 1110px;
+  --social-icons-size: 1.5rem;
 }
 
 .bai-jamjuree-light {
@@ -78,6 +79,15 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
 }
 
 .visually-hidden {
@@ -140,6 +150,7 @@ header,
   letter-spacing: 0.5px;
   transition: 0.4s ease-in;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .primary {
@@ -315,7 +326,7 @@ footer nav a:hover {
   cursor: pointer;
 }
 
-footer .social-links {
+.social-links {
   flex: 0 1;
   display: flex;
   justify-content: space-between;
@@ -323,23 +334,15 @@ footer .social-links {
   min-width: 10rem;
 }
 
-.social-links svg {
-  fill: var(--col_gray_dark);
-}
-
 .social-links a svg {
-  transition: fill 0.45s ease;
-  width: 1.5rem;
-  height: 1.5rem;
+  transition: fill 0.5s ease;
+  fill: var(--col_gray_dark);
+  width: var(--social-icons-size);
+  height: var(--social-icons-size);
 }
 
 .social-links a:hover svg {
   fill: var(--col_cyan_strong);
-  cursor: pointer;
-}
-
-footer .social-links img:hover {
-  color: var(--col_cyan_strong);
   cursor: pointer;
 }
 
@@ -417,3 +420,14 @@ footer .social-links img:hover {
     flex-basis: 21rem;
     max-width: 21rem;
   }
+}
+
+@media only screen and (min-width: 2300px) {
+  :root {
+    --social-icons-size: 2.25rem;
+  }
+
+  footer .social-links {
+    min-width: 12.5rem;
+  }
+}
