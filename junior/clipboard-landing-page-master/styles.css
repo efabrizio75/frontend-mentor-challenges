@@ -7,10 +7,10 @@
 
   --col_gray_for_white: #6f787c;
   /* Instead of #9EABB2 */
-  --col_cyan_for_white: #188574;
+  --col_cyan_for_white: #1B8575;
   /* Instead of #26BBA4 */
   --col_blue_light_for_white: #586AEA;
-  /* Instead of #6174FF */
+  /* Instead of #6173FF */
   --col_white: hsl(0, 0%, 100%);
   --ff-root: "Bai Jamjuree", sans-serif;
   --fs-root: 16px;
@@ -154,20 +154,22 @@ header,
 }
 
 .primary {
-  background-color: var(--col_cyan_strong);
+  background-color: var(--col_cyan_for_white);
   box-shadow: var(--col_cyan_for_white) 0.5rem 1.15rem 1.75rem -1rem;
 }
 
 .secondary {
-  background-color: var(--col_blue_light);
-  box-shadow: var(--col_blue_light_for_white) 0.5rem 1.15rem 1.75rem -1rem;
+  background-color: var(--col_blue_light_for_white);
+  box-shadow: var(--col_blue_light) 0.5rem 1.15rem 1.75rem -1rem;
 }
 
 .primary:hover {
+  background-color: var(--col_cyan_strong);
   box-shadow: var(--col_cyan_strong) 0 0.625rem 1.25rem 0;
 }
 
 .secondary:hover {
+  background-color: var(--col_blue_light);
   box-shadow: var(--col_gray) 0 0.625rem 1.25rem 0;
 }
 
