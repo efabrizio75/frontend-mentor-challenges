@@ -11,9 +11,54 @@
       font-size: 16px;
     }
 
+    /* UTILITY CLASSES */
+    .sr-only {
+      border-width: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      white-space: nowrap;
+    }
+
     #root>* {
       outline: 1px dotted red;
       max-width: 1440px;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      border-bottom: 2px solid navy;
+    }
+
+    header>.header__container {
+      position: relative;
+      left: 0;
+      top: 0;
+      z-index: auto;
+      padding: 2rem;
+    }
+
+    /* Filter to blur the background */
+    header>.header__container::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(.2rem);
     }
 
     footer>* {
@@ -57,12 +102,53 @@
         display: inline-block;
       }
     }
+
+    .socials.fontawesome {
+      display: flex;
+      justify-content: space-between;
+      width: 10rem;
+
+      .fa-facebook-f::before {
+        content: "\f39e";
+      }
+
+      .fa-pinterest-p::before {
+        content: "\f231";
+      }
+
+      [class^="fab fa-"]::before,
+      [class*=" fab fa-"]::before {
+        font-family: "Font Awesome 5 Brands" !important;
+        font-weight: 900 !important;
+      }
+    }
+
+    /* ELEMENTS */
+    a:hover,
+    a:focus {
+      color: #fff;
+      box-shadow: 0 0 0 .5rem transparent;
+      text-decoration: underline;
+      transition: color .4s ease-in-out 0s normal;
+    }
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+    }
   </style>
 </head>
 
 <body>
-  <div id="root">
-    <main></main>
+  <ul id="root">
+    <header>
+      <nav class="header__container">
+        <p>Site Name HERE</p>
+      </nav>
+    </header>
+    <main>
+    </main>
     <footer>
       <nav class="nav">
         <img src="images/logo.svg" width="55" height="55" />
@@ -79,8 +165,12 @@
         <img src="images/icon-twitter.svg" width="24" height="24" />
         <img src="images/icon-instagram.svg" width="24" height="24" />
       </div>
+      <ul class="socials fontawesome">
+        <li><a target="_blank" href="#facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i><span
+              class="sr-only">Follow us on facebook</span></a></li>
+      </ul>
     </footer>
-  </div>
+    </div>
 </body>
 
 </html>
