@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive rating component @ Frontend Mentor | by Emanuele Fabrizio</title>
+  <meta name="description"
+    content="Track and organize everything you copy with Clipboard. Sync across devices, search snippets, and boost productivity. Available for iOS and Mac. Download now." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+  <link rel="stylesheet" href="styles.css" media="all" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="canonical"
+    href="https://efabrizio75.github.io/frontend-mentor-challenges/newbie/interactive-rating-component-main/" />
+</head>
+
+<body>
+  <main aria-roledescription="This contains the actual solution to the challenge">
+    <div id="interactive-rating-component" class="container submission">
+      <img src="images/illustration-thank-you.svg" width="162" height="108" alt="" />
+      <p class="rating">You selected <span id="choice">4</span> of 5</p>
+      <h2>Thank you!</h2>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in
+        touch!</p>
+    </div>
+  </main>
+  <script>
+    // Function to get the query string parameter by name
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Get the rating from the query string
+    const ratingValue = getQueryParam("rating");
+
+    // Check if the element with ID 'choice' exists and set the text
+    const choiceElement = document.getElementById("choice");
+    if (choiceElement && ratingValue) {
+      choiceElement.textContent = ratingValue;
+    }
+  </script>
+</body>
+
+</html>

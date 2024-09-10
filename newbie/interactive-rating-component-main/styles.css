@@ -1,0 +1,240 @@
+:root {
+  --col_orange: hsl(25, 97%, 53%);
+  --col_white: hsl(0, 0%, 100%);
+  --col_gray: hsl(217, 12%, 63%);
+  --col_blue: hsl(213, 19%, 18%);
+  --col_darkblue: hsl(216, 12%, 8%);
+  --col_black: hsl(0, 0%, 0%);
+  --gradient_black: radial-gradient(circle, hsl(215, 20%, 17%) 0%, hsl(216, 24%, 12%) 100%);
+  --ff-body: "Overpass", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --line_height_circles: 2.7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 0;
+  border: none;
+  appearance: none;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  background-color: var(--col_darkblue);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+}
+
+main {
+  width: 100%;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.container {
+  background: var(--gradient_black);
+  padding: 2.4rem;
+  color: var(--col_gray);
+  min-height: 36rem;
+  max-width: 42rem;
+  min-width: 18rem;
+  border-radius: 1.5rem;
+  margin-inline: auto;
+}
+
+h1 {
+  color: var(--col_white);
+  font-size: 2.4rem;
+  font-weight: var(--fw-bold);
+  margin-block: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 2.2;
+}
+
+.favorite {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--col_darkblue);
+  text-align: center;
+  line-height: var(--line_height_circles);
+}
+
+.favorite img {
+  display: inline-block;
+  margin-inline: auto;
+  border: 1px solid var(--col_black);
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  margin-block: 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+fieldset .rating-container {
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: var(--col_darkblue);
+  border-radius: 50%;
+  text-align: center;
+  color: var(--col_gray);
+  font-weight: var(--fw-bold);
+}
+
+fieldset .rating-container.hovered {
+  cursor: pointer;
+  background-color: var(--col_orange);
+  color: var(--col_darkblue);
+}
+
+fieldset .rating-container.selected {
+  background-color: var(--col_white);
+  color: var(--col_darkblue);
+}
+
+fieldset .rating-container label {
+  font-size: 1.4rem;
+  line-height: var(--line_height_circles);
+}
+
+button {
+  background-color: var(--col_orange);
+  color: var(--col_darkblue);
+  font-size: 1.4rem;
+  width: 100%;
+  font-weight: var(--fw-bold);
+  padding: 1.3rem 2rem;
+  border: 1px solid var(--col_darkblue);
+  border-radius: 22.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  transition: background-color .4s ease-in-out 0s normal;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--col_white);
+}
+
+button:focus,
+button:focus-visible {
+  outline: max(2px, 0.3rem) dotted var(--col_white);
+  outline-offset: 0.3rem;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: #fff;
+  box-shadow: 0 0 0 .5rem transparent;
+  text-decoration: underline;
+  transition: color .4s ease-in-out 0s normal;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  * Submission page
+  */
+.submission {
+  text-align: center;
+}
+
+.submission h2 {
+  color: var(--col_white);
+  font-size: 2.8rem;
+  font-weight: var(--fw-bold);
+  margin: 4rem 0 3rem 0;
+}
+
+.submission .rating {
+  margin-top: 3rem;
+  max-width: 18rem;
+  margin-inline: auto;
+  color: var(--col_orange);
+  background-color: var(--col_darkblue);
+  border-radius: 2.25rem;
+  line-height: 1;
+  padding: 0.85rem 1.2rem 0.7rem 1.2rem;
+}
+
+.submission p {
+  margin-inline: auto;
+  line-height: 1.75;
+  max-width: max(35ch, 90%);
+}
+
+/**
+  * Utilities selectors by Kevin Powell
+  * Credit to: Kevin Powell @ https: //www.youtube.com/watch?v=eWmDW4zEXt4
+  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p,
+li,
+figcaption {
+  max-width: 72ch;
+  text-wrap: pretty;
+}
+
+body> :is(header, footer),
+main,
+section,
+article {
+  container-type: inline-size;
+}
+
+/* End of utilities selectors by Kevin Powell */
