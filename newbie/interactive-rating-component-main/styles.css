@@ -9,7 +9,7 @@
   --ff-body: "Overpass", sans-serif;
   --fw-regular: 400;
   --fw-bold: 700;
-  --line_height_circles: 2.7;
+  --line_height_circles: 2.8;
 }
 
 *,
@@ -52,12 +52,14 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   align-content: center;
+  overflow-x: scroll;
 }
 
 main {
   width: 100%;
   margin-inline: auto;
   padding: 1rem;
+  overflow-x: scroll;
 }
 
 .container {
@@ -214,20 +216,23 @@ img {
   * Utilities selectors by Kevin Powell
   * Credit to: Kevin Powell @ https: //www.youtube.com/watch?v=eWmDW4zEXt4
   */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
+@supports (text-wrap: balance) {
 
-p,
-li,
-figcaption {
-  max-width: 72ch;
-  text-wrap: pretty;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  figcaption {
+    max-width: 72ch;
+    text-wrap: balance;
+  }
 }
 
 body> :is(header, footer),
