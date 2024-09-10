@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --content-width: 90rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+    }
+
+    header {
+      background-image: url(images/bg-header-desktop.png);
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      outline: 1px dotted red;
+    }
+
+    .container {
+      max-width: var(--content-width);
+      margin-inline: auto;
+      padding-inline: 2rem;
+      outline: 1px dotted green;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Header</h1>
+      <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit optio a libero repudiandae qui
+        eveniet, eum eos quia laudantium porro repellat debitis sed nisi deleniti id expedita reprehenderit alias amet.
+      </p>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="container">
+        <h2>Title</h2>
+        <p class="blurb">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt repellendus magnam
+          distinctio odio aliquid error harum quaerat placeat exercitationem itaque. Libero facilis quos error ipsa
+          pariatur, iste tempore corrupti possimus.</p>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Feature</h2>
+        <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam exercitationem necessitatibus
+          id accusantium voluptatibus.</p>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h2>Tools</h2>
+        <ol>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>
