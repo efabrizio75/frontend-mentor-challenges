@@ -144,6 +144,10 @@ footer a {
     opacity: 0.5;
   }
 
+  & .darker {
+    opacity: 0.75;
+  }
+
   & p {
     margin: calc(var(--spacing) * 1.25) 0 calc(var(--spacing) * 1.125) 0;
   }
