@@ -7,26 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
   <style>
+    :root {
+      --col_white: #fff;
+      --fs-body: 1.8rem;
+    }
+
     html {
-      font-size: 16px;
+      font-size: 62.5%;
+      box-sizing: border-box;
     }
 
     /* UTILITY CLASSES */
     .sr-only {
-      border-width: 0;
+      position: absolute;
+      overflow: hidden;
       clip: rect(0, 0, 0, 0);
+      width: 1px;
       height: 1px;
       margin: -1px;
-      overflow: hidden;
       padding: 0;
-      position: absolute;
-      width: 1px;
+      border-width: 0;
+      font-size: 0;
       white-space: nowrap;
+      appearance: none;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      overflow: hidden;
+      top: -10px;
+      left: -10px;
+      width: 0;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border-width: 0;
+      font-size: 0;
+      white-space: nowrap;
+      appearance: none;
     }
 
     #root>* {
       outline: 1px dotted red;
       max-width: 1440px;
+    }
+
+    body {
+      font-size: var(--fs-body);
     }
 
     header {
@@ -91,6 +118,34 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
+    footer nav li a {
+      color: #c3f;
+      position: relative;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    footer nav li a:hover,
+    footer nav li a:active,
+    footer nav li a:focus {
+      text-decoration: none;
+    }
+
+    footer nav a:hover::before {
+      width: 100%;
+    }
+
+    footer nav li a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0px;
+      height: 2px;
+      background-color: #c3f;
+      transition: all 0.75s ease-in-out;
+    }
+
     footer nav ul>* {}
 
     .socials {
@@ -124,6 +179,7 @@
     }
 
     /* ELEMENTS */
+    /*
     a:hover,
     a:focus {
       color: #fff;
@@ -131,33 +187,148 @@
       text-decoration: underline;
       transition: color .4s ease-in-out 0s normal;
     }
+    */
 
     img {
       display: inline-block;
       max-width: 100%;
       height: auto;
     }
+
+    button:hover {
+      cursor: pointer;
+      background-color: var(--col_white);
+    }
+
+    button:focus,
+    button:focus-visible {
+      outline: max(2px, 0.3rem) dotted var(--col_white);
+      outline-offset: 0.3rem;
+    }
+
+    button:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /**
+  * Utilities selectors by Kevin Powell
+  * Credit to: Kevin Powell @ https: //www.youtube.com/watch?v=eWmDW4zEXt4
+  */
+    @supports (text-wrap: balance) {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        text-wrap: balance;
+      }
+
+      p,
+      li,
+      figcaption {
+        max-width: 72ch;
+        text-wrap: balance;
+      }
+    }
+
+    body> :is(header, footer),
+    main,
+    section,
+    article {
+      container-type: inline-size;
+    }
+
+    /* End of utilities selectors by Kevin Powell */
   </style>
 </head>
 
 <body>
-  <ul id="root">
+  <div id="root">
     <header>
       <nav class="header__container">
         <p>Site Name HERE</p>
       </nav>
     </header>
     <main>
+      <div class="container">
+        <h1>Features</h1>
+        <p>On the top header, we apply a filter to make the content underneath blurred.</p>
+        <p>Inside the footer there is a navigation on which we use some clever technique to "create" the appearance of
+          an underline using a CSS animation. Effect found at: <a href="https://www.molinocolombo.it/"
+            rel="noreferrer nofollow" target="_blank">Molino
+            Colombo</a></p>
+        <h2>Review for Atzori Luciana</h2>
+        <p>I malloreddus di Luciana li ho conosciuti a Monaco di Baviera. Li ho gustati nel loro contesto di nascita,
+          abbinati ad
+          altri ingredienti Sardi. Li ho trovati semplicemente perfetti come dimensione e consistenza: ne ho apprezzato
+          il colore
+          e il sapore.
+          Grazie per continuare nella produzione di tale specialità senza ricorrere a scorciatoie o convenienze
+          produttive che
+          snaturano la grandezza delle paste artigianali sarde.
+          Spero presto di poter tornare a Villaputzu per assaggiare altre paste.
+          Grazie Sig. Luciana.</p>
+      </div>
+      <section class="container">
+        <p>
+          Sit amet culpa harum accusamus deleniti mollitia quo, cupiditate, saepe magni ea quod, doloremque nam cum
+          ullam
+          quaerat voluptatum. Fugit, magnam dolores! Eos fuga, aliquid velit minima nisi dolor totam?
+          Aspernatur a assumenda ea quasi quo explicabo facere. Hic laboriosam nobis sed est quas voluptatum totam quia
+          molestias dolores modi atque voluptatibus, illo aspernatur! Minus consectetur eveniet perferendis labore
+          doloribus!</p>
+        <p>
+          Ducimus cupiditate consectetur modi minus. Natus, placeat facilis eos minus, repellat aliquam, illum
+          perspiciatis aliquid cum voluptatem iste dolorum! Similique, voluptatum minus? Minima commodi totam eos quam
+          id
+          dolores! Quod.</p>
+        <p>Amet, voluptatem unde distinctio similique dignissimos quia eligendi aliquam molestiae error repellat, itaque
+          doloribus deserunt vero mollitia dolor at consequatur repellendus dolore corrupti sunt voluptas ducimus
+          placeat?
+          Iure, rem harum.</p>
+        <p>
+          Autem, rem reprehenderit? Iure deserunt odio corporis beatae voluptatem itaque maxime ut saepe nemo dolore,
+          inventore ab dolorum temporibus! Suscipit eius at fugiat voluptates natus officiis alias iusto culpa eaque.
+          Et cupiditate ipsa veritatis delectus in iste ad itaque optio tempora fuga, dolorum asperiores cum ratione
+          velit
+          quis officiis sed nisi quo ab. Nesciunt accusamus, atque quis deserunt maxime eligendi.</p>
+        <p>Sit modi qui rem? Ea explicabo alias eum consectetur porro maxime distinctio tempore, sapiente quasi ipsam
+          necessitatibus consequuntur maiores, veritatis perspiciatis omnis tempora, officiis ullam at animi fugit.
+          Assumenda, blanditiis.</p>
+        <p>
+          Delectus nesciunt quaerat, dolorem impedit illo ea necessitatibus iusto corporis natus? Voluptatem, mollitia
+          harum. Cum repudiandae, nam itaque eum architecto animi consequatur. Maiores doloribus dicta blanditiis, dolor
+          quisquam aliquam. Asperiores!
+        </p>
+        <p>Rerum culpa inventore nulla fugiat esse ipsa blanditiis amet optio dolor, saepe minus, repudiandae
+          consequatur.
+          Illo itaque unde tempora asperiores inventore optio, non, hic iste molestias nesciunt, amet minus cumque?
+          Cum voluptatum et alias eaque tempore ea distinctio sint eius, libero atque mollitia possimus similique,
+          suscipit, ratione quod animi voluptas nesciunt autem ut quisquam laboriosam necessitatibus? Eaque iusto quasi
+          quia?</p>
+        <p>
+          Ipsam, autem sit quos omnis quam impedit. Odit quisquam ipsam commodi soluta fugit, laudantium dignissimos
+          vero
+          labore animi quis, eveniet beatae, incidunt debitis quas accusantium facere. Enim, magnam. Delectus, facere.
+          Laborum magni dolore doloremque, animi perferendis, veritatis ut neque asperiores nulla recusandae tempore at
+          cupiditate eius aspernatur suscipit, quisquam mollitia. Iure suscipit doloremque maxime eos inventore laborum
+          consequatur ex quasi.</p>
+        <p>
+          Itaque voluptates minus ea eaque! Saepe tempora nobis iste sint fuga. Praesentium maxime dicta veniam, facere,
+          reiciendis quae neque eum eveniet itaque earum culpa cupiditate ipsum consequatur? Accusamus, hic dolore.</p>
+      </section>
     </main>
     <footer>
       <nav class="nav">
         <img src="images/logo.svg" width="55" height="55" />
         <ul>
-          <li>FAQs</li>
-          <li>Contact Us</li>
-          <li>Privacy Policy</li>
-          <li>Press Kit</li>
-          <li>Install Guide</li>
+          <li><a href="#faq" class="nav-link">FAQs</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+          <li><a href="#policy" class="nav-link">Privacy Policy</a></li>
+          <li><a href="#press" class="nav-link">Press Kit</a></li>
+          <li><a href="#install" class="nav-link">Install Guide</a></li>
         </ul>
       </nav>
       <div class="socials">
@@ -170,7 +341,7 @@
               class="sr-only">Follow us on facebook</span></a></li>
       </ul>
     </footer>
-    </div>
+  </div>
 </body>
 
 </html>
